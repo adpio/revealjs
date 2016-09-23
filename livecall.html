@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<style type="text/css">
+		.no_border{background: none !important; border: none !important; box-shadow: none !important;}
+		.i_big i{ font-size: 150px; }
+	</style>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img src="assets/Logo_v3.png" style="max-width: 200px;">
+					<h1>LiveCall</h1>
+					<h3>Engage your clients</h3>
+					<p>
+						<img src="assets/swipe-icon.png" class="no_border">
+					</p>
+				</section>
+
+				<section>
+					<h2>Prioritize</h2>
+					<p>
+						What if you could recognize the most valuable visitors and speak to them.
+					</p>
+				</section>
+
+				<section data-autoslide="27000" data-background-video="assets/LiveCall_demo_movie.mp4" data-background-color="#000000">
+					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+						<h2>Enable click-to-call in your business today!</h2>
+						<p>
+							LiveCall is an in-page web-widget that allows for targeted Calls-to-Action encouraging browsers to click to open an internet based voice or video call from within the browser. 
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Imporve Call Center Efficiency</h2>
+					<i class="fa fa-line-chart" style="font-size:150px;float:left; margin-right:10px;"></i>
+					<p style="text-align:justify;">Use filters and direct customers to the right department. Prioritize high quality leads and make the best use of your reprsentative's time</p>
+					<br>
+
+				</section>
+				<section>
+					<h2>Omnichannel Experience</h2>
+					<i class="fa fa-map-marker" style="font-size:150px;float:left; margin-right:10px;"></i>
+					<p style="text-align:justify;">Use geolocation and allow customers to call the same location that they will visit in-person.
+					<br>
+					</p>
+				</section>
+				<section>
+					<h2>Engage at the Right Time</h2>
+					<i class="fa fa-globe" style="font-size:150px;float:left; margin-right:10px;"></i>
+					<p style="text-align:justify;">Begin conversations with your clients when they are ready to make a purchase decison.
+					<br>
+					</p>
+				</section>
+
+
+				<section data-autoslide="1000">
+					<h2>Engage Custmers Using</h2>
+					<p class="i_big">
+						<p class="fragment fade-up">
+						<i class="fa fa-volume-control-phone"></i>
+						Voice Calls
+						<br>
+						</p>
+						<p class="fragment fade-up">
+						<i class="fa fa-video-camera"></i>
+						Video Calls
+						<br>
+						</p>
+						<p class="fragment fade-up">
+						<i class="fa fa-share-square-o"></i>
+						Screen Sharing
+						<br>
+						</p>
+					</p>
+				</section>
+
+				<section>
+					<img src="assets/Logo_v3.png" style="max-width: 200px;">
+					<h1>What else can we do for you?</h1>
+					<p>If you wish to know more on how digital technologies can transform your business</p>
+					<a href="/contact">contact us</a>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				autoSlide: 3000,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
