@@ -47,12 +47,15 @@
 		    if (!results[2]) return '';
 		    return decodeURIComponent(results[2].replace(/\+/g, " "));
 			}
-			var target_name = getParameterByName('target_name');
-			var ambassador_name = getParameterByName('ambassador_name');
-			
+			var tn = getParameterByName('tn');
+			var an = getParameterByName('an');
+			var ae = getParameterByName('ae');
+			var email_link = 'mailto:'+ae+'?Subject=Vintom'
+
 			window.onload = function() {
-			document.getElementById('target_name').innerHTML = target_name;
-			document.getElementById('ambassador_name').innerHTML = ambassador_name;
+				if (tn){document.getElementById('target_name').innerHTML = tn;};
+				if (an){document.getElementById('ambassador_email').innerHTML = an;};
+				if (ae){document.getElementById('ambassador_email').href = email_link;};
 			}
 		</script>
 
@@ -75,7 +78,7 @@
 			<div class="slides">
 				<section>
 					<!-- <img src="assets/Logo_v3.png" style="max-width: 100px;"> -->
-					<h1><!-- <img src="assets/vintom_logo_black.png" class="no_border" style="max-height:150px;" alt="Vintom"> -->Hi <span id="target_name"></span>!</h1>
+					<h1><!-- <img src="assets/vintom_logo_black.png" class="no_border" style="max-height:150px;" alt="Vintom"> -->Hi <span id="target_name">there</span>!</h1>
 					<p>Have you ever wanted to replicate your <b>best sales practices at scale</b> across your entire user-base in an easily customizable and <b>personalized manner?</b>
 					</p>
 					<p>
@@ -176,8 +179,11 @@
 				<section>
 					<img src="assets/Logo_v3.png" style="max-width: 200px;">
 					<h1>What else can we do for you?</h1>
-					<p>If you wish to know more on how digital technologies can transform your business</p>
-					<a href="/contact">contact us</a>
+					<p>If you wish to know more on how digital technologies can transform your business contact me or go to brandbassadors.com/contact
+					</p>
+					<i class="fa fa-envelope-square" style="color: #e7ad52;"></i>
+					<a href="/contact" id="ambassador_email">contact us</a>
+
 				</section>
 
 			</div>
