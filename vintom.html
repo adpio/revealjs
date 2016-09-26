@@ -37,6 +37,23 @@
 
 			ga('create', 'UA-77235604-1', 'auto');
 			ga('send', 'pageview')
+
+			function getParameterByName(name, url) {
+		    if (!url) url = window.location.href;
+		    name = name.replace(/[\[\]]/g, "\\$&");
+		    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		        results = regex.exec(url);
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			var target_name = getParameterByName('target_name');
+			var ambassador_name = getParameterByName('ambassador_name');
+			
+			window.onload = function() {
+			document.getElementById('target_name').innerHTML = target_name;
+			document.getElementById('ambassador_name').innerHTML = ambassador_name;
+			}
 		</script>
 
 		<!--[if lt IE 9]>
@@ -58,7 +75,7 @@
 			<div class="slides">
 				<section>
 					<!-- <img src="assets/Logo_v3.png" style="max-width: 100px;"> -->
-					<h1><!-- <img src="assets/vintom_logo_black.png" class="no_border" style="max-height:150px;" alt="Vintom"> -->Personilized Videos Solution</h1>
+					<h1><!-- <img src="assets/vintom_logo_black.png" class="no_border" style="max-height:150px;" alt="Vintom"> -->Hi <span id="target_name"></span>!</h1>
 					<p>Have you ever wanted to replicate your <b>best sales practices at scale</b> across your entire user-base in an easily customizable and <b>personalized manner?</b>
 					</p>
 					<p>
@@ -115,7 +132,7 @@
 					<h2>higher renewal rate</h2>
 					<small>(compared to traditional methods)</small>
 					
-					<p style="text-align:justify;">Vintom can be used in automated contract renewal campaigns. In those tests Vintom proved 14% more successful than other methods</p>
+					<p style="text-align:justify;">Interactive videos can be used in automated contract renewal campaigns. In those tests Vintom proved 14% more successful than other methods</p>
 					<br>
 
 				</section>
@@ -125,7 +142,7 @@
 					<h2>higher ARPU</h2>
 					<small>(compared to traditional methods)</small>
 					
-					<p style="text-align:justify;">Vintom not only is more successful in renewing contracts but at a higher ARPU too!</p>
+					<p style="text-align:justify;">Videos are not only more successful in renewing contracts but at a higher ARPU too!</p>
 					<br>
 
 				</section>
