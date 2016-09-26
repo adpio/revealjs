@@ -22,22 +22,8 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-77235604-1', 'auto');
-			ga('send', 'pageview')
-		</script>
+		<!-- Printing and PDF exports and BBs custom scripts-->
+		<script src="brandbassadors.js"></script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -58,8 +44,8 @@
 			<div class="slides">
 				<section>
 					
-					<h1>Click to call</h1>
-					<h3>The most advanced click to call solution and engagement platform</h3>
+					<h1>Hi <span id="target_name">there</span>!</h1>
+					<h3>Learn more about the most advanced click to call solution available</h3>
 					<p>
 						<img src="assets/swipe-icon-gray.png" class="no_border">
 					</p>
@@ -157,9 +143,10 @@
 				<section>
 					<img src="assets/Logo_v3.png" style="max-width: 100px;">
 					<h2>What else can we do for you?</h2>
-					<p>If you wish to know more on how digital technologies can transform your business</p>
-					<i class="fa fa-paper-plane-o"></i>
-					<a href="/contact">contact us</a>
+					<p>If you wish to know more on how digital technologies can transform your business contact me or go to brandbassadors.com/contact</p>
+					<i class="fa fa-paper-plane-o" style="color: #3b759e;"></i>
+					<a href="/contact" id="ambassador_email">contact us</a>
+					<div class="livecall-widget"></div>
 				</section>
 
 			</div>
@@ -192,6 +179,19 @@
 				]
 			});
 
+		</script>
+
+		<script>
+		  window._livecallSettings = {
+		    id: 678
+		  };
+		  (function(d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) return;
+		    js = d.createElement(s); js.id = id;
+		    js.src = "//assets.livecall.io/assets/livecall-widget.js";
+		    fjs.parentNode.insertBefore(js, fjs);
+		  })(document, "script", "livecall-script");
 		</script>
 
 	</body>
